@@ -1,0 +1,11 @@
+///// building the image /////
+docker build -t telegram-ip-bot 
+
+///// building the container //////
+docker run -d \
+  --name ip_bot \
+  -e BOT_TOKEN="YOUR_TOKEN" \
+  -e AUTHORIZED_USER_ID=YOUR_USER \
+  telegram-ip-bot
+
+
